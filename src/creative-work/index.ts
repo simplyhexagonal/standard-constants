@@ -1,8 +1,11 @@
 import { Organization } from "../organization";
 import { Person } from "../person";
+import { Name } from "../utils/string-types/name";
 
 export interface CreativeWork {
-  publishedAt?: Date;
+  name: Name;
+
+  publishDate?: Date;
 
   flaggedAt?: Date;
 
@@ -34,5 +37,5 @@ export interface CreativeWork {
   /**
    * @pattern ^(ftp|http|https|chrome|:\/\/|\.|@){2,}(localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\S*:\w*@)*([a-zA-Z]|(\d{1,3}|\.){7}){1,}(\w|\.{2,}|\.[a-zA-Z]{2,3}|\/|\?|&|:\d|@|=|\/|\(.*\)|#|-|%)*$
    */
-  authenticityCertificationUrl: string;
+  authenticityCertificationUrl?: string;
 }

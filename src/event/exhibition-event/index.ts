@@ -1,17 +1,13 @@
 import { CreativeWork } from "../../creative-work";
 import { Organization } from "../../organization";
 import { Person } from "../../person";
+import { Abstract } from "../../utils/string-types/abstract";
+import { Descriptor } from "../../utils/string-types/descriptor";
 
 export interface ExhibitionEvent {
-  /**
-   * @pattern ^.{0,5000}$
-   */
-  about?: string;
+  about?: Abstract;
 
-  /**
-   * @pattern ^.{0,75}$
-   */
-  intendedAudience?: string;
+  intendedAudience?: Descriptor;
 
   authors?: (Person | Organization)[];
 

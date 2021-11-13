@@ -1,3 +1,4 @@
+import { Url } from "../../utils/string-types/url";
 import { Brand } from "../brand";
 import { Address, Email, Telephone } from "../contact-information";
 import { Language } from "../language";
@@ -8,7 +9,7 @@ export interface Personhood {
   brands: Brand[];
 
   /**
-   * @items {"minimum": 1}
+   * @minItems 1
    */
   emails: Email[];
 
@@ -26,10 +27,7 @@ export interface Personhood {
    */
   vatId?: string;
 
-  /**
-   * @items {"type": "string", "pattern": "^(ftp|http|https|chrome|:\/\/|\.|@){2,}(localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\S*:\w*@)*([a-zA-Z]|(\d{1,3}|\.){7}){1,}(\w|\.{2,}|\.[a-zA-Z]{2,3}|\/|\?|&|:\d|@|=|\/|\(.*\)|#|-|%)*$"}
-   */
-  avatarUrls: string[];
+  avatarUrls: Url[];
 
   identification?: {
     /**
