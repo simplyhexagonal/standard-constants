@@ -423,7 +423,6 @@ export interface LanguageSkill {
 }
 
 export interface Language {
-  name?: LanguageName;
   code: LanguageCode;
   region?: CountryCode;
   skill?: LanguageSkill;
