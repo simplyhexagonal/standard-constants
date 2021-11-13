@@ -1,6 +1,6 @@
 {
   "name": "@simplyhexagonal/standard-constants",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Exhaustive collection of Typescript interfaces, constant values, and utils based on official international standards",
   "repository": {
     "type": "git",
