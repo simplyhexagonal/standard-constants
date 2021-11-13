@@ -8,7 +8,7 @@ export interface User extends Person, Organization {
 
   passwordHash: PasswordHash;
 
-  passwordResetToken?: PasswordHash | null;
+  passwordResetToken?: PasswordHash;
 
   confirmed: boolean;
 
