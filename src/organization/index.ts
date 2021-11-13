@@ -11,7 +11,7 @@ export interface Organization extends Personhood {
 
   foundingDate?: Date;
 
-  founder?: Person;
+  founder?: IdString;
 
   globalLocationNumber?: IdString;
 
