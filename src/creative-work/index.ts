@@ -1,6 +1,9 @@
 import { Organization } from "../organization";
 import { Person } from "../person";
+import { CountryCode } from "../place/country";
+import { Descriptor } from "../utils/string-types/descriptor";
 import { Name } from "../utils/string-types/name";
+import { Url } from "../utils/string-types/url";
 
 export interface CreativeWork {
   name: Name;
@@ -29,13 +32,9 @@ export interface CreativeWork {
 
   copyrightNotice?: string;
 
-  /**
-   * @pattern ^.{0,75}$
-   */
-  edition?: string;
+  edition?: Descriptor;
 
-  /**
-   * @pattern ^(ftp|http|https|chrome|:\/\/|\.|@){2,}(localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|\S*:\w*@)*([a-zA-Z]|(\d{1,3}|\.){7}){1,}(\w|\.{2,}|\.[a-zA-Z]{2,3}|\/|\?|&|:\d|@|=|\/|\(.*\)|#|-|%)*$
-   */
-  authenticityCertificationUrl?: string;
+  authenticityCertificationUrl?: Url;
+
+  countryOfOrigin?: CountryCode;
 }

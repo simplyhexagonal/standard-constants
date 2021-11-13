@@ -1,3 +1,5 @@
+import { Descriptor } from "../../utils/string-types/descriptor";
+import { IdString } from "../../utils/string-types/id";
 import { Url } from "../../utils/string-types/url";
 import { Brand } from "../brand";
 import { Address, Email, Telephone } from "../contact-information";
@@ -17,27 +19,15 @@ export interface Personhood {
 
   telephones: Telephone[];
 
-  /**
-   * @pattern ^[a-zA-Z0-9]{6,64}$
-   */
-  taxId?: string;
+  taxId?: IdString;
 
-  /**
-   * @pattern ^[a-zA-Z0-9]{6,64}$
-   */
-  vatId?: string;
+  vatId?: IdString;
 
   avatarUrls: Url[];
 
   identification?: {
-    /**
-     * @pattern ^[a-zA-Z0-9]{6,64}$
-     */
-    type: string;
+    type: IdString;
 
-    /**
-     * @pattern ^.{0,75}$
-     */
-    value: string;
+    value: Descriptor;
   };
 }
