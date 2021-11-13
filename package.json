@@ -1,0 +1,11 @@
+{
+  "name": "standard-constants",
+  "version": "0.1.0",
+  "description": "Exhaustive collection of Typescript interfaces, constant values, and utils based on official international standards",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/organizations/simplyhexagonal/standard-constants"
+  },
+  "author": "Jean M. Lescure",
+  "license": "Apache-2.0"
+}
