@@ -22,5 +22,3 @@ export interface Brand {
 
   colorPalette: Color[];
 }
-
-const e: Color = {};
