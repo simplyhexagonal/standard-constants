@@ -20,5 +20,5 @@ export interface Brand {
 
   typefaces: ExtendedName[];
 
-  colorPalette: HexColor[] | RGBColor[] | RGBAColor[] | HSLColor[] | CYMKColor[];
+  colorPalette: (HexColor | RGBColor | RGBAColor | HSLColor | CYMKColor)[];
 }
