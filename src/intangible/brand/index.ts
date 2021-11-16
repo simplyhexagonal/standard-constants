@@ -1,6 +1,6 @@
 import { ExtendedName } from "../../utils/string-types/name";
 import { Url } from "../../utils/string-types/url";
-import { CYMKColor, HexColor, HSLColor, RGBAColor, RGBColor } from "../color";
+import { Color } from "../color";
 
 export interface Brand {
   name: ExtendedName;
@@ -20,5 +20,7 @@ export interface Brand {
 
   typefaces: ExtendedName[];
 
-  colorPalette: (HexColor | RGBColor | RGBAColor | HSLColor | CYMKColor)[];
+  colorPalette: Color[];
 }
+
+const e: Color = {};

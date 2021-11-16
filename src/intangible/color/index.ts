@@ -7,31 +7,25 @@ import {
 } from "../../utils/string-types/color";
 
 export interface HexColor {
-  name?: string;
-
-  value: ColorHexString;
+  hexColorValue?: ColorHexString;
 }
 
 export interface RGBColor {
-  name?: string;
-
-  value: ColorRgbString;
+  rgbColorValue?: ColorRgbString;
 }
 
 export interface RGBAColor {
-  name?: string;
-
-  value: ColorRgbaString;
+  rgbaColorValue?: ColorRgbaString;
 }
 
 export interface HSLColor {
-  name?: string;
-
-  value: ColorHslString;
+  hslColorValue?: ColorHslString;
 }
 
 export interface CYMKColor {
-  name?: string;
+  cymkColorValue?: ColorCmykString;
+}
 
-  value: ColorCmykString;
+export interface Color extends HexColor, RGBColor, RGBAColor, HSLColor, CYMKColor {
+  name?: string;
 }
