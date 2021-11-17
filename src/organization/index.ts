@@ -15,11 +15,11 @@ export interface Organization extends Personhood {
 
   globalLocationNumber?: IdString;
 
-  legalName: ExtendedName;
+  legalName?: ExtendedName;
 
   leiCode?: IdString;
 
-  location: Address;
+  location?: Address;
 
   numberOfEmployees?: number;
 
