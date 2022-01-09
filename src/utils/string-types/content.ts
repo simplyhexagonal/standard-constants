@@ -1,4 +1,4 @@
 /**
- * @maxLength 21000
+ * @maxLength 30618
  */
 export type Content = string;
