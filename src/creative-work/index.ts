@@ -1,7 +1,6 @@
-import { Organization } from "../organization";
-import { Person } from "../person";
 import { CountryCode } from "../place/country";
 import { Descriptor } from "../utils/string-types/descriptor";
+import { IdString } from "../utils/string-types/id";
 import { Name } from "../utils/string-types/name";
 import { Url } from "../utils/string-types/url";
 
@@ -14,19 +13,19 @@ export interface CreativeWork {
 
   disputedAt?: Date;
 
-  authors: (Person | Organization)[];
+  authors: IdString[]; // Person or Organization
 
-  contributors?: (Person | Organization)[];
+  contributors?: IdString[]; // Person or Organization
 
-  researchers?: (Person | Organization)[];
+  researchers?: IdString[]; // Person or Organization
 
-  editors?: (Person | Organization)[];
+  editors?: IdString[]; // Person or Organization
 
-  publishers?: (Person | Organization)[];
+  publishers?: IdString[]; // Person or Organization
 
-  licensors?: (Person | Organization)[];
+  licensors?: IdString[]; // Person or Organization
 
-  copyrightHolder?: (Person | Organization)[];
+  copyrightHolder?: IdString[]; // Person or Organization
 
   copyrightYear?: number;
 
@@ -37,4 +36,6 @@ export interface CreativeWork {
   authenticityCertificationUrl?: Url;
 
   countryOfOrigin?: CountryCode;
+
+  tags: IdString[]; // Tag
 }

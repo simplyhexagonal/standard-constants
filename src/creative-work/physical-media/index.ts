@@ -8,9 +8,10 @@ import {
 } from "../../intangible/quantity/physical/derived-units/length";
 import { Descriptor } from "../../utils/string-types/descriptor";
 
-export interface Painting {
-  materials: Descriptor[];
-  dimensions: {
+export interface PhysicalMedia {
+  media: Descriptor[];
+  techniques: Descriptor[];
+  dimensions?: {
     width: MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit;
     height: MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit;
     depth: MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit;
