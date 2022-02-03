@@ -3,7 +3,7 @@ export interface UnitDefinition {
   symbol: string;
 }
 
-export interface Quantity {
-  value: Number;
-  unit: UnitDefinition;
+export interface Quantity<U = UnitDefinition> {
+  value: string;
+  unit: U;
 }

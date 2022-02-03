@@ -1,3 +1,4 @@
+import { Quantity } from "../../intangible/quantity";
 import { MeterUnit } from "../../intangible/quantity/physical/base-units/length";
 import {
   CentiMeterUnit,
@@ -12,8 +13,8 @@ export interface PhysicalMedia {
   media: Descriptor[];
   techniques: Descriptor[];
   dimensions?: {
-    width: MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit;
-    height: MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit;
-    depth: MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit;
+    width: Quantity<MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit>;
+    height: Quantity<MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit>;
+    depth?: Quantity<MilliMeterUnit | CentiMeterUnit | MeterUnit | InchUnit | FeetUnit | YardUnit>;
   },
 }
