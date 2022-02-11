@@ -1,11 +1,10 @@
 import { CountryCode } from "../place/country";
 import { Descriptor } from "../utils/string-types/descriptor";
 import { IdString } from "../utils/string-types/id";
-import { Name } from "../utils/string-types/name";
 import { Url } from "../utils/string-types/url";
 
 export interface CreativeWork {
-  name: Name;
+  name: Descriptor;
 
   publishDate?: Date;
 
